@@ -3,6 +3,7 @@
 namespace App\Filament\Pages;
 
 use App\Models\Classes;
+use Spatie\Permission\Models\Role;
 use App\Models\Student;
 use App\Models\Subscription;
 use App\Models\User;
@@ -32,14 +33,18 @@ class AdminDashboard extends Page
         |--------------------------------------------------------------------------
         */
 
-        $totalTeachers = User::role('teacher')->count();
+        $totalTeachers = Role::where('name', 'teacher')->exists()
+            ? User::role('teacher')->count()
+            : 0;
 
-        $newTeachersThisMonth = User::role('teacher')
-            ->whereBetween('created_at', [
-                $now->copy()->startOfMonth(),
-                $now->copy()->endOfMonth(),
-            ])
-            ->count();
+        $newTeachersThisMonth = Role::where('name', 'teacher')->exists()
+            ? User::role('teacher')
+                ->whereBetween('created_at', [
+                    $now->copy()->startOfMonth(),
+                    $now->copy()->endOfMonth(),
+                ])
+                ->count()
+            : 0;
 
         /*
         |--------------------------------------------------------------------------
@@ -111,17 +116,19 @@ class AdminDashboard extends Page
         |--------------------------------------------------------------------------
         */
 
-        $latestTeachers = User::query()
-            ->role('teacher')
-            ->latest()
-            ->limit(6)
-            ->get([
-                'id',
-                'name',
-                'email',
-                'school',
-                'created_at',
-            ]);
+        $latestTeachers = Role::where('name', 'teacher')->exists()
+            ? User::query()
+                ->role('teacher')
+                ->latest()
+                ->limit(6)
+                ->get([
+                    'id',
+                    'name',
+                    'email',
+                    'school',
+                    'created_at',
+                ])
+            : collect();
 
         /*
         |--------------------------------------------------------------------------

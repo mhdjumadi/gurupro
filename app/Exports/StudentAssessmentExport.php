@@ -15,9 +15,9 @@ class StudentAssessmentExport implements
     WithHeadings,
     ShouldAutoSize
 {
-    protected int $classId;
+    protected string $classId;
 
-    protected ?int $subjectId;
+    protected ?string $subjectId;
 
     public function __construct(
         int $classId,
