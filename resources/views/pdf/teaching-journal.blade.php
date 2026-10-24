@@ -104,25 +104,28 @@
 
         .signature {
             width: 100%;
-            margin-top: 30px;
+            border-collapse: collapse;
+            text-align: left;
         }
 
         .signature td {
             width: 50%;
-            text-align: center;
+            text-align: left;
             vertical-align: top;
+            border: none;
         }
 
         .signature-space {
-            height: 60px;
+            height: 80px;
         }
 
         .signature-name {
             font-weight: bold;
+            text-decoration: underline;
         }
 
         .signature-nip {
-            margin-top: 3px;
+            margin-top: 4px;
         }
     </style>
 </head>
@@ -169,7 +172,7 @@
             <td>: {{ $nip ?? '-' }}</td>
 
             <td class="label">Mata Pelajaran</td>
-            <td>: {{ $subject?? '-' }}</td>
+            <td>: {{ $subject ?? '-' }}</td>
         </tr>
 
         <tr>
@@ -278,25 +281,10 @@
     ========================= --}}
 
     <table class="signature">
-
         <tr>
-
             <td>
-                Guru Mata Pelajaran
-
-                <div class="signature-space"></div>
-
-                <div class="signature-name">
-                    {{ $teacher ?? '-' }}
-                </div>
-
-                <div class="signature-nip">
-                    NIP. {{ $nip ?? '____________________' }}
-                </div>
-            </td>
-
-
-            <td>
+                <br>
+                <br>
                 Mengetahui,<br>
                 Kepala Sekolah
 
@@ -311,8 +299,24 @@
                 </div>
             </td>
 
-        </tr>
+            <td>
+                <br>
+                Berau, ......../......../ {{ now()->year }}
+                <br>
+                <br>
+                Guru Mata Pelajaran
 
+                <div class="signature-space"></div>
+
+                <div class="signature-name">
+                    {{ $teacher ?? '-' }}
+                </div>
+
+                <div class="signature-nip">
+                    NIP. {{ $nip ?? '____________________' }}
+                </div>
+            </td>
+        </tr>
     </table>
 
 </body>

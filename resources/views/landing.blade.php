@@ -55,11 +55,9 @@
 
         .hero-glow {
             background:
-                radial-gradient(
-                    circle at center,
+                radial-gradient(circle at center,
                     rgba(16, 185, 129, .14),
-                    transparent 65%
-                );
+                    transparent 65%);
         }
     </style>
 </head>
@@ -67,7 +65,7 @@
 <body class="bg-white text-slate-800 antialiased">
 
     {{-- =========================================================
-        NAVBAR
+    NAVBAR
     ========================================================== --}}
     <header x-data="{ open: false }" class="fixed inset-x-0 top-0 z-50">
 
@@ -83,16 +81,10 @@
                         <div
                             class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-600 text-white shadow-lg shadow-primary-600/20">
 
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
 
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
 
                             </svg>
@@ -105,7 +97,8 @@
                                 Guru<span class="text-primary-600">Pro</span>
                             </div>
 
-                            <div class="hidden text-[10px] font-medium uppercase tracking-widest text-slate-400 sm:block">
+                            <div
+                                class="hidden text-[10px] font-medium uppercase tracking-widest text-slate-400 sm:block">
                                 Teacher Platform
                             </div>
 
@@ -117,8 +110,7 @@
                     {{-- DESKTOP NAV --}}
                     <nav class="hidden items-center gap-8 md:flex">
 
-                        <a href="#fitur"
-                            class="text-sm font-medium text-slate-600 transition hover:text-primary-600">
+                        <a href="#fitur" class="text-sm font-medium text-slate-600 transition hover:text-primary-600">
                             Fitur
                         </a>
 
@@ -143,8 +135,8 @@
                             Masuk
                         </a>
 
-                        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
-                target="_blank" rel="noopener noreferrer"
+                        <a href="https://wa.me/6285166414180?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+                            target="_blank" rel="noopener noreferrer"
                             class="rounded-xl bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-600/20 transition hover:bg-primary-700 hover:shadow-primary-600/30">
                             Daftar Gratis
                         </a>
@@ -153,36 +145,20 @@
 
 
                     {{-- MOBILE BUTTON --}}
-                    <button
-                        @click="open = !open"
-                        class="rounded-xl p-2 text-slate-600 hover:bg-slate-100 md:hidden">
+                    <button @click="open = !open" class="rounded-xl p-2 text-slate-600 hover:bg-slate-100 md:hidden">
 
-                        <svg x-show="!open"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
 
                         </svg>
 
-                        <svg x-show="open"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M6 18L18 6M6 6l12 12" />
 
                         </svg>
@@ -193,26 +169,21 @@
 
 
                 {{-- MOBILE MENU --}}
-                <div
-                    x-show="open"
-                    class="border-t border-slate-100 py-4 md:hidden">
+                <div x-show="open" class="border-t border-slate-100 py-4 md:hidden">
 
                     <div class="flex flex-col gap-1">
 
-                        <a @click="open = false"
-                            href="#fitur"
+                        <a @click="open = false" href="#fitur"
                             class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">
                             Fitur
                         </a>
 
-                        <a @click="open = false"
-                            href="#cara-kerja"
+                        <a @click="open = false" href="#cara-kerja"
                             class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">
                             Cara Kerja
                         </a>
 
-                        <a @click="open = false"
-                            href="#keunggulan"
+                        <a @click="open = false" href="#keunggulan"
                             class="rounded-xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">
                             Keunggulan
                         </a>
@@ -225,8 +196,8 @@
                                 Masuk
                             </a>
 
-                            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
-                target="_blank" rel="noopener noreferrer"
+                            <a href="https://wa.me/6285166414180?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+                                target="_blank" rel="noopener noreferrer"
                                 class="flex-1 rounded-xl bg-primary-600 px-4 py-3 text-center text-sm font-semibold text-white">
                                 Daftar Gratis
                             </a>
@@ -245,7 +216,7 @@
 
 
     {{-- =========================================================
-        HERO
+    HERO
     ========================================================== --}}
     <section class="relative overflow-hidden pt-36 sm:pt-40">
 
@@ -272,8 +243,7 @@
 
 
                 {{-- HEADING --}}
-                <h1
-                    class="text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-7xl">
+                <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-7xl">
 
                     Mengajar lebih fokus.
 
@@ -298,22 +268,16 @@
                 {{-- CTA --}}
                 <div class="mt-9">
 
-                    <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
-                target="_blank" rel="noopener noreferrer"
+                    <a href="https://wa.me/6285166414180?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+                        target="_blank" rel="noopener noreferrer"
                         class="group inline-flex items-center justify-center gap-2 rounded-2xl bg-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-primary-600/20 transition hover:-translate-y-0.5 hover:bg-primary-700">
 
                         Daftar Gratis Sekarang
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 transition group-hover:translate-x-1"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition group-hover:translate-x-1"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M13 7l5 5m0 0l-5 5m5-5H6" />
 
                         </svg>
@@ -326,7 +290,7 @@
 
 
             {{-- =================================================
-                DASHBOARD MOCKUP
+            DASHBOARD MOCKUP
             ================================================== --}}
             <div class="relative mx-auto mt-16 max-w-6xl">
 
@@ -364,15 +328,10 @@
                                 <div
                                     class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-white">
 
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-4 w-4"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
 
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                        <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
 
                                     </svg>
@@ -388,7 +347,8 @@
 
                             <div class="space-y-1">
 
-                                <div class="rounded-xl bg-primary-50 px-3 py-2.5 text-xs font-semibold text-primary-600">
+                                <div
+                                    class="rounded-xl bg-primary-50 px-3 py-2.5 text-xs font-semibold text-primary-600">
                                     Dashboard Guru
                                 </div>
 
@@ -447,16 +407,10 @@
                                     <div
                                         class="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
 
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 
                                         </svg>
@@ -480,16 +434,10 @@
                                     <div
                                         class="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
 
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z" />
 
                                         </svg>
@@ -513,16 +461,10 @@
                                     <div
                                         class="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-sky-50 text-sky-600">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
 
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 
                                         </svg>
@@ -546,16 +488,10 @@
                                     <div
                                         class="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
 
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 12l2 2 4-4M7.835 4.697a3.5 3.5 0 005.33 0 3.5 3.5 0 015.11 2.308 3.5 3.5 0 002.308 5.11 3.5 3.5 0 010 5.33 3.5 3.5 0 00-2.308 5.11 3.5 3.5 0 01-5.11 2.308 3.5 3.5 0 00-5.33 0 3.5 3.5 0 01-5.11-2.308 3.5 3.5 0 00-2.308-5.11 3.5 3.5 0 010-5.33A3.5 3.5 0 004.697 7.835a3.5 3.5 0 013.138-3.138z" />
 
                                         </svg>
@@ -580,8 +516,7 @@
 
 
                                 {{-- Schedule --}}
-                                <div
-                                    class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm lg:col-span-2">
+                                <div class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm lg:col-span-2">
 
                                     <div class="mb-5 flex items-center justify-between">
 
@@ -692,37 +627,40 @@
                                                 Riwayat pembelajaran Anda
                                             </p>
                                         </div>
-                                    
+
                                         <span class="text-xs text-primary-600 font-medium">
                                             Lihat Semua
                                         </span>
                                     </div>
-                                
+
                                     <div class="space-y-3">
                                         @foreach ([
-    [
-        'subject' => 'Informatika',
-        'class' => 'VII A',
-        'date' => '21 Sep 2026',
-        'description' => 'Pengenalan algoritma dan logika dasar'
-    ],
-    [
-        'subject' => 'Informatika',
-        'class' => 'VIII B',
-        'date' => '20 Sep 2026',
-        'description' => 'Membuat program sederhana menggunakan Python'
-    ],
-    [
-        'subject' => 'Teknologi Informasi',
-        'class' => 'IX A',
-        'date' => '19 Sep 2026',
-        'description' => 'Pengenalan jaringan komputer'
-    ],
-] as $journal)
+                                                [
+                                                    'subject' => 'Informatika',
+                                                    'class' => 'VII A',
+                                                    'date' => '21 Sep 2026',
+                                                    'description' => 'Pengenalan algoritma dan logika dasar'
+                                                ],
+                                                [
+                                                    'subject' => 'Informatika',
+                                                    'class' => 'VIII B',
+                                                    'date' => '20 Sep 2026',
+                                                    'description' => 'Membuat program sederhana menggunakan Python'
+                                                ],
+                                                [
+                                                    'subject' => 'Teknologi Informasi',
+                                                    'class' => 'IX A',
+                                                    'date' => '19 Sep 2026',
+                                                    'description' => 'Pengenalan jaringan komputer'
+                                                ],
+                                            ] as $journal)
                                             <div class="flex gap-3 p-3 rounded-lg bg-gray-50">
-                                                <div class="w-9 h-9 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
-                                                    <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                <div
+                                                    class="w-9 h-9 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
                                                             d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332-.477-4.5 1.253" />
                                                     </svg>
                                                 </div>
@@ -766,7 +704,7 @@
 
 
     {{-- =========================================================
-        FITUR
+    FITUR
     ========================================================== --}}
     <section id="fitur" class="bg-slate-50 py-24 sm:py-28">
 
@@ -801,15 +739,9 @@
                     <div
                         class="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition group-hover:bg-primary-600 group-hover:text-white">
 
-                        <svg class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
 
                         </svg>
@@ -834,15 +766,9 @@
                     <div
                         class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 transition group-hover:bg-emerald-600 group-hover:text-white">
 
-                        <svg class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z" />
 
                         </svg>
@@ -867,15 +793,9 @@
                     <div
                         class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 transition group-hover:bg-amber-500 group-hover:text-white">
 
-                        <svg class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2z" />
 
                         </svg>
@@ -900,15 +820,9 @@
                     <div
                         class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-50 text-sky-600 transition group-hover:bg-sky-600 group-hover:text-white">
 
-                        <svg class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 
                         </svg>
@@ -933,15 +847,9 @@
                     <div
                         class="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-50 text-violet-600 transition group-hover:bg-violet-600 group-hover:text-white">
 
-                        <svg class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 
                         </svg>
@@ -966,15 +874,9 @@
                     <div
                         class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 text-rose-600 transition group-hover:bg-rose-600 group-hover:text-white">
 
-                        <svg class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 17v-1a3 3 0 013-3h0a3 3 0 013 3v1m-6 0h6m-9 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2z" />
 
                         </svg>
@@ -999,7 +901,7 @@
 
 
     {{-- =========================================================
-        CARA KERJA
+    CARA KERJA
     ========================================================== --}}
     <section id="cara-kerja" class="bg-white py-24 sm:py-28">
 
@@ -1089,7 +991,7 @@
 
 
     {{-- =========================================================
-        KEUNGGULAN
+    KEUNGGULAN
     ========================================================== --}}
     <section id="keunggulan" class="bg-slate-50 py-24 sm:py-28">
 
@@ -1169,7 +1071,7 @@
 
 
     {{-- =========================================================
-        CTA
+    CTA
     ========================================================== --}}
     <section class="relative overflow-hidden bg-primary-700 py-20 sm:py-24">
 
@@ -1189,16 +1091,18 @@
             </p>
 
 
-            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+            <a href="https://wa.me/6285166414180?text=Halo%2C%20saya%20tertarik%20mencoba%20GuruPro%20secara%20gratis.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
                 target="_blank" rel="noopener noreferrer"
                 class="mt-8 inline-flex items-center gap-2 rounded-2xl bg-white px-7 py-3.5 text-sm font-bold text-primary-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-primary-50">
-            
+
                 Daftar Gratis Sekarang
-            
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+
                 </svg>
             </a>
 
@@ -1208,7 +1112,7 @@
 
 
     {{-- =========================================================
-        FOOTER
+    FOOTER
     ========================================================== --}}
     <footer class="border-t border-slate-100 bg-white">
 
@@ -1218,18 +1122,12 @@
 
             <div class="flex items-center gap-3">
 
-                <div
-                    class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-600 text-white">
+                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-600 text-white">
 
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
 
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                        <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
 
                     </svg>

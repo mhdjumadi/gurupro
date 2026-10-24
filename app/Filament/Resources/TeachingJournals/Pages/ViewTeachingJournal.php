@@ -23,13 +23,13 @@ class ViewTeachingJournal extends ViewRecord
     {
         return [
             EditAction::make(),
-            Action::make('exportPdf')
-                ->label('Export PDF')
-                ->icon('heroicon-o-document-arrow-down')
-                ->action(function () {
-                    return app(TeachingJournalPdf::class)
-                        ->download($this->record->id);
-                })
+            // Action::make('exportPdf')
+            //     ->label('Export PDF')
+            //     ->icon('heroicon-o-document-arrow-down')
+            //     ->action(function () {
+            //         return app(TeachingJournalPdf::class)
+            //             ->download($this->record->id);
+            //     })
         ];
     }
 

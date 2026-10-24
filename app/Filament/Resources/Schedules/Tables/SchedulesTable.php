@@ -19,6 +19,12 @@ class SchedulesTable
         return $table
             ->columns([
                 TextColumn::make('teacher.name')
+                    ->label('Guru')
+                    ->sortable()
+                    ->visible(fn() => Auth::user()->hasRole('super_admin')),
+                TextColumn::make('teacher.school')
+                    ->label('Sekolah')
+                    ->numeric()
                     ->sortable()
                     ->visible(fn() => Auth::user()->hasRole('super_admin')),
                 TextColumn::make('day')

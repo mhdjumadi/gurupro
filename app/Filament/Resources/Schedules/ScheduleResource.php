@@ -73,6 +73,18 @@ class ScheduleResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::count();
+        $user = Auth::user();
+
+        if (!$user) {
+            return null;
+        }
+
+        if ($user->hasRole('super_admin')) {
+            return (string) static::getModel()::count();
+        }
+
+        return (string) static::getModel()::query()
+            ->where('teacher_id', $user->id)
+            ->count();
     }
 }

@@ -24,6 +24,11 @@ class ClassesTable
                     ->numeric()
                     ->sortable()
                     ->visible(fn() => Auth::user()->hasRole('super_admin')),
+                TextColumn::make('teacher.school')
+                    ->label('Sekolah')
+                    ->numeric()
+                    ->sortable()
+                    ->visible(fn() => Auth::user()->hasRole('super_admin')),
                 TextColumn::make('name')
                     ->label('Nama Kelas')
                     ->searchable(),
